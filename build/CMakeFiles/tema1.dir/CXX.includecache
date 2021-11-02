@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+/home/cojocariu/Downloads/cmake/01/Tema1---IEP/Basketball.cpp
+iostream
+-
+TeamSport.cpp
+/home/cojocariu/Downloads/cmake/01/Tema1---IEP/TeamSport.cpp
+
 /home/cojocariu/Downloads/cmake/01/Tema1---IEP/TeamSport.cpp
 iostream
 -
@@ -13,10 +19,6 @@ iostream
 /home/cojocariu/Downloads/cmake/01/Tema1---IEP/main.cpp
 iostream
 -
-chrono
--
-ctime
--
-TeamSport.cpp
-/home/cojocariu/Downloads/cmake/01/Tema1---IEP/TeamSport.cpp
+Basketball.cpp
+/home/cojocariu/Downloads/cmake/01/Tema1---IEP/Basketball.cpp
 

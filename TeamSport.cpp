@@ -55,16 +55,18 @@ class TeamSport{
 		std::cout << "Name: " << name << " | PlayersPerTeam: " << nrPlayersPerTeam << " | FieldType: " << fieldType << " | Environment: " << environment << std::endl;
 		std::cout << std::endl;
 	}
-	
+
 	// DESTRUCTOR
-	~TeamSport(){
-		std::cout << "TeamSport deleted..." << std::endl;
+	virtual ~TeamSport()
+	{
+		std::cout << "TeamSport deleted..." << std::endl; 
+        std::cout << std::endl;
 	}
 
 	// COPY CONSTRUCTOR
-	TeamSport(const TeamSport &ts) = delete;
+	TeamSport(const TeamSport& ts) = delete;
 
-	// COPY ASSIGNMENT OPERATOR
+	// COPY ASSIGNMENT
 	TeamSport& operator = (const TeamSport& ts);
 
 	void setName(std::string name){
