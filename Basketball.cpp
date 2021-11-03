@@ -21,10 +21,18 @@ class Basketball : public TeamSport {
     league(league),
     age(age)
     {
-        std::cout << "Default basketball with initialization was created ..." << std::endl;
+        std::cout << "Custom basketball with initialization was created ..." << std::endl;
         std::cout << "LEAGUE: " << league << " |AGE: " << age << std::endl; 
         std::cout << std::endl;
     }
+
+    void setLeague(std::string league){
+		this->league = league;
+	}
+
+	void setAge(int age){
+		this->age = age;
+	}
 
     //DESTRUCTOR
     ~Basketball(){

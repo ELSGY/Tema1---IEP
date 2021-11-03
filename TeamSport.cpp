@@ -57,7 +57,7 @@ class TeamSport{
 	}
 
 	// DESTRUCTOR
-	virtual ~TeamSport()
+	~TeamSport()
 	{
 		std::cout << "TeamSport deleted..." << std::endl; 
         std::cout << std::endl;

@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/tema1.dir/Basketball.cpp.o"
+  "CMakeFiles/tema1.dir/TeamSport.cpp.o"
   "CMakeFiles/tema1.dir/main.cpp.o"
   "tema1"
   "tema1.pdb"

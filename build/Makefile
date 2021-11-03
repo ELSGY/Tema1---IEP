@@ -123,6 +123,60 @@ tema1/fast:
 	$(MAKE) -f CMakeFiles/tema1.dir/build.make CMakeFiles/tema1.dir/build
 .PHONY : tema1/fast
 
+Basketball.o: Basketball.cpp.o
+
+.PHONY : Basketball.o
+
+# target to build an object file
+Basketball.cpp.o:
+	$(MAKE) -f CMakeFiles/tema1.dir/build.make CMakeFiles/tema1.dir/Basketball.cpp.o
+.PHONY : Basketball.cpp.o
+
+Basketball.i: Basketball.cpp.i
+
+.PHONY : Basketball.i
+
+# target to preprocess a source file
+Basketball.cpp.i:
+	$(MAKE) -f CMakeFiles/tema1.dir/build.make CMakeFiles/tema1.dir/Basketball.cpp.i
+.PHONY : Basketball.cpp.i
+
+Basketball.s: Basketball.cpp.s
+
+.PHONY : Basketball.s
+
+# target to generate assembly for a file
+Basketball.cpp.s:
+	$(MAKE) -f CMakeFiles/tema1.dir/build.make CMakeFiles/tema1.dir/Basketball.cpp.s
+.PHONY : Basketball.cpp.s
+
+TeamSport.o: TeamSport.cpp.o
+
+.PHONY : TeamSport.o
+
+# target to build an object file
+TeamSport.cpp.o:
+	$(MAKE) -f CMakeFiles/tema1.dir/build.make CMakeFiles/tema1.dir/TeamSport.cpp.o
+.PHONY : TeamSport.cpp.o
+
+TeamSport.i: TeamSport.cpp.i
+
+.PHONY : TeamSport.i
+
+# target to preprocess a source file
+TeamSport.cpp.i:
+	$(MAKE) -f CMakeFiles/tema1.dir/build.make CMakeFiles/tema1.dir/TeamSport.cpp.i
+.PHONY : TeamSport.cpp.i
+
+TeamSport.s: TeamSport.cpp.s
+
+.PHONY : TeamSport.s
+
+# target to generate assembly for a file
+TeamSport.cpp.s:
+	$(MAKE) -f CMakeFiles/tema1.dir/build.make CMakeFiles/tema1.dir/TeamSport.cpp.s
+.PHONY : TeamSport.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -159,6 +213,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... tema1"
+	@echo "... Basketball.o"
+	@echo "... Basketball.i"
+	@echo "... Basketball.s"
+	@echo "... TeamSport.o"
+	@echo "... TeamSport.i"
+	@echo "... TeamSport.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
