@@ -28,7 +28,7 @@ int main()
 
     // delete ts2;
 
-    Basketball *bsk = new Basketball("ChicagoBulls", 12, "Wood", "Outdoor", "1", "+18");
+    TeamSport *bsk = new Basketball("ChicagoBulls", 12, "Wood", "Outdoor", "1", "+18");
 
     delete bsk;
 

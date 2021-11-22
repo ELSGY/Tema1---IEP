@@ -41,9 +41,9 @@ class Basketball : public TeamSport {
     }
 
     // COPY CONSTRUCTOR
-	Basketball(const Basketball& bs) = delete;
+	// Basketball(const Basketball& bs) = delete;
 
 	// COPY ASSIGNMENT
-	Basketball& operator = (const Basketball& bs);
+	// Basketball& operator = (const Basketball& bs);
 
 };

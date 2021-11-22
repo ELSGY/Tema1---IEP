@@ -25,7 +25,7 @@ class TeamSport{
 	// 	this->nrPlayersPerTeam = nr;
 	// 	this->fieldType = field;
 	// 	this->environment = env;
-	//
+	
 	// 	std::cout << "Custom sport with assignation was created..." << std::endl;
 	// 	std::cout << "Name: " << name << " | PlayersPerTeam: " << nrPlayersPerTeam << " | FieldType: " << fieldType << " | Environment: " << environment << std::endl;
 	// 	std::cout << std::endl;
@@ -56,8 +56,8 @@ class TeamSport{
 		std::cout << std::endl;
 	}
 
-	// DESTRUCTOR
-	~TeamSport()
+	// DESTRUCTOR -> virtual "Making base class destructor virtual guarantees that the object of derived class is desctructed properly."
+	virtual ~TeamSport()
 	{
 		std::cout << "TeamSport deleted..." << std::endl; 
         std::cout << std::endl;
@@ -65,6 +65,10 @@ class TeamSport{
 
 	// COPY CONSTRUCTOR
 	TeamSport(const TeamSport& ts) = delete;
+
+	// sau
+	// private:
+	// TeamSport(const TeamSport& ts);
 
 	// COPY ASSIGNMENT
 	TeamSport& operator = (const TeamSport& ts);
