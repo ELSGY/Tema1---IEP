@@ -64,14 +64,14 @@ class TeamSport{
 	}
 
 	// COPY CONSTRUCTOR
-	TeamSport(const TeamSport& ts) = delete;
+	// TeamSport(const TeamSport& ts) = delete;
 
 	// sau
 	// private:
 	// TeamSport(const TeamSport& ts);
 
 	// COPY ASSIGNMENT
-	TeamSport& operator = (const TeamSport& ts);
+	// TeamSport& operator = (const TeamSport& ts);
 
 	void setName(std::string name){
 		this->name = name;
@@ -93,4 +93,67 @@ class TeamSport{
 		std::cout << "Name: " << name << " | PlayersPerTeam: " << nrPlayersPerTeam << " | FieldType: " << fieldType << " | Environment: " << environment << std::endl;
 		std::cout << std::endl;
 	}
+	
+	// Tema 2
+	// COPY CONSTRUCTOR
+	TeamSport(const TeamSport& ts)
+	:name(ts.name),
+	nrPlayersPerTeam(ts.nrPlayersPerTeam),
+	fieldType(ts.fieldType),
+	environment(ts.environment)
+	{
+		// OR
+		// this->name = ts.name;
+		// this->nrPlayersPerTeam = ts.nrPlayersPerTeam;
+		// this->fieldType = ts.fieldType;
+		// this->environment = ts.environment;
+
+		std::cout << "COPY CONSTRUCTOR -> Copy every field when given an object as parameter to the constructor ..." << std::endl;
+		std::cout << "Name: " << name << " | PlayersPerTeam: " << nrPlayersPerTeam << " | FieldType: " << fieldType << " | Environment: " << environment << std::endl;
+		std::cout << std::endl;
+		
+	}
+
+	// COPY ASSIGNMENT
+	TeamSport& operator = (const TeamSport& ts)
+	{	
+		if(this == &ts)
+		{
+			std::cout<< "Self-assignment for TeamSport..abort copying.." << std::endl;
+			std::cout << std::endl;
+			return *this;
+		}
+
+		std::cout << "Copy fields from given reference..." << std::endl;
+		name = ts.name;
+		nrPlayersPerTeam = ts.nrPlayersPerTeam;
+		fieldType = ts.fieldType;
+		environment = ts.environment;
+
+		// UNSAFE !
+		// delete this;
+		// this = new TeamSport(ts);
+		// other method -> save a copy of original fields
+
+		return *this;
+	}
+
+	void swap(const TeamSport& ts)
+	{
+		if(this == &ts)
+		{
+			std::cout<< "Won't swap same object's data.." << std::endl;
+			std::cout << std::endl;
+		
+		}
+
+		std::cout<< "Swapping data.." << std::endl;
+		std::cout << std::endl;
+
+		this->name = ts.name;
+		this->nrPlayersPerTeam = ts.nrPlayersPerTeam;
+		this->fieldType = ts.fieldType;
+		this->environment = ts.environment;
+	}
+
 };
