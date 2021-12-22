@@ -1,10 +1,13 @@
 #include <iostream>
 #include "TeamSport.cpp"
 
+
+
 class Basketball : public TeamSport {
     private:
     std::string league;
     std::string age;
+    bool onVacantion = false;
 
     public:
     Basketball()
@@ -27,11 +30,15 @@ class Basketball : public TeamSport {
     }
 
     void setLeague(std::string league){
+        if(!isOnVacantion()){
 		this->league = league;
+        }
 	}
 
-	void setAge(int age){
+	void setAge(std::string age){
+        if(!isOnVacantion()){
 		this->age = age;
+        }
 	}
 
 
@@ -65,7 +72,7 @@ class Basketball : public TeamSport {
     // COPY ASSIGNMENT
     Basketball& operator = (const Basketball& bs)
     {
-        if(this == &bs)
+        if(this == &bs) // be aware when you use this -> IT COSTS!
 		{
 			std::cout<< "Self-assignment for Basketball..abort copying.." << std::endl;
 			std::cout << std::endl;
@@ -100,5 +107,30 @@ class Basketball : public TeamSport {
 		this->age = bs.age;
 
 	}
+
+    void showDetails(){
+		std::cout << "League: " << league << " | Age: " << age << std::endl;
+		std::cout << std::endl;
+	}
+
+    // Tema 3
+
+    void putOnVacantion(){
+        this->onVacantion = true;
+    }
+
+    void getOutVacantion(){
+        this->onVacantion = false;
+    }
+
+    bool isOnVacantion(){
+        if(this->onVacantion){
+            std::cout<<"Echipa este in vacanta!Nu poate participa la turneu..." << std::endl;
+            return true;
+        }else{
+            std::cout<<"Echipa poate participa la turneu..." << std::endl;
+            return false;
+    }
+}
 
 };

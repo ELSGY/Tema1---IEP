@@ -117,7 +117,7 @@ class TeamSport{
 	// COPY ASSIGNMENT
 	TeamSport& operator = (const TeamSport& ts)
 	{	
-		if(this == &ts)
+		if(this == &ts) // be aware when you use this -> IT COSTS!
 		{
 			std::cout<< "Self-assignment for TeamSport..abort copying.." << std::endl;
 			std::cout << std::endl;
